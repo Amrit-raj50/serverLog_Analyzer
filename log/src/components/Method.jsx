@@ -26,8 +26,11 @@ export default function Method({file}){
     return(
         <>
          {
-                Object.keys(tempFreq).map((key) => (
-                    <h1 key={key}>{key} : {tempFreq[key]}</h1>
+                Object.keys(tempFreq).sort((a,b) => tempFreq[b] - tempFreq[a]).map((key) => (
+                    <div key={key} className="metric-row">
+                        <span className="metric-label">{key}</span>
+                        <span className="metric-value">{tempFreq[key]}</span>
+                    </div>
                 ))
             }
         </>

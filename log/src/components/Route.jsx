@@ -26,10 +26,10 @@ export default function Route({ file }) {
 
 
     return (
-        <>
-            <h1>
-                Route taking maximum response time {maxRes} : {maxRoute}
-            </h1>
-        </>
+        <div className="route-highlight">
+            <div className="metric-label">Slowest Route:</div>
+            <div style={{ wordBreak: 'break-all' }}>{maxRoute || "N/A"}</div>
+            <span className="time">{maxRes} ms</span>
+        </div>
     )
 }

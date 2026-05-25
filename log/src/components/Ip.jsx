@@ -26,8 +26,11 @@ export default function Ip({file}){
     return(
         <>
          {
-                Object.keys(ipFreq).map((key) => (
-                    <h1 key={key}>{key} : {ipFreq[key]}</h1>
+                Object.keys(ipFreq).sort((a,b) => ipFreq[b] - ipFreq[a]).map((key) => (
+                    <div key={key} className="metric-row">
+                        <span className="metric-label">{key}</span>
+                        <span className="metric-value">{ipFreq[key]}</span>
+                    </div>
                 ))
             }
         </>

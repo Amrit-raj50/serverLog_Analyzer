@@ -18,13 +18,9 @@ export default function TotalReq({file}){
     // setReq(req);//set the frequency of valid request
 
     return(
-        <>
-        {/* {summary && ( */}
-                <div style={{ marginTop: '20px', padding: '10px', border: '1px solid black' }}>
-                    <h2>Report</h2>
-                    <p>total request processed : {req}</p>
-                </div>
-            {/* )} */}
-        </>
+        <div className="total-req-container">
+            <div className="total-req-number">{req}</div>
+            <div className="total-req-label">Valid Requests</div>
+        </div>
     )
 }
