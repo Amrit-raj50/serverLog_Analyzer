@@ -1,10 +1,10 @@
 import React from 'react';
-import Front from './pages/Front';
+import Landing from './pages/Landing';
 
 export default function App(){
   return(
     <>
-    <Front/>
+    <Landing/>
     </>
   )
 };
