@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
-// Import the newly created CSS file for our stunning UI
+import TotalReq from '../components/TotalReq';
+import Route from '../components/Route';
+import Method from '../components/Method';
+import Ip from '../components/Ip';
 
-export default function Front() {
+
+
+export default function Landing() {
     // State to hold the contents of the uploaded log file
     const [fileContent, setFileContent] = useState('');
 
